@@ -1,6 +1,6 @@
-import cosas.*
+import cosas2.*
 
-describe "test cosas" {
+describe "test cosas 2" {
 test "La cantidad de ladrillos es 20, entonces su peso es 40 y peligrosidad 2" {
       ladrillos.cantidad(20)
       assert.equals(40, ladrillos.peso())

@@ -1,24 +1,30 @@
-import cosas.*
-import camion.*
+import cosas2.*
+import camion2.*
 
-describe "test de camion" {
+describe "test camion2" {
+  test "camion agrega a ladrillos, entonces el peso de estos es 24kg.
+        Y peso total es 1012kg" {
+    camion.cargar(ladrillos)
+    assert.equals(24, ladrillos.peso())
+    assert.equals(1024, camion.pesoTotal())
+  }
 
-  test "camion tiene a bumblee en robot. Su peso total es 1800kg" {
-      bumblebee.transformar(robot)
+
+  test "camion agrega a bumblee. Su peso total es 1800kg" {
       camion.cargar(bumblebee)
 
       assert.equals(1800, camion.pesoTotal())
-  }
-test "camion tiene arena. Tiene una cosa de 150kg y no es impar" {
-        arena.peso(150)
+}
+
+  test "camion tiene arena. Tiene una cosa de 0kg y no es impar" {
         camion.cargar(arena)
-        assert.that(camion.hayCosaDePeso(150))
+        assert.that(camion.hayCosaDePeso(0))
         assert.notThat(camion.pesoEsImpar())
 
 }
+
 test "Se agrega bateria y embalaje con 80 ladrillos dentro, el peso total 
 del camion es 460 + 1000 de tara " {
-      bateriaAntiaerea.estaConMisiles(true)
       embalajeDeSeguridad.cosaEnvuelta(ladrillos)
       ladrillos.cantidad(80)
       camion.cargar(bateriaAntiaerea)
@@ -27,4 +33,4 @@ del camion es 460 + 1000 de tara " {
       
 }
 
-} 
+}

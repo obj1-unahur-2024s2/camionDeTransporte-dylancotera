@@ -2,8 +2,10 @@ object camion {
 
     const cosas = []
 
-    method cargar(algo) { cosas.add(algo) }
-
+    method cargar(algo) { cosas.add(algo) 
+                          algo.sufrirCambio()
+    }
+    
     method descargar(algo) { cosas.remove(algo) }
 
     method pesoTotal() = cosas.sum({c => c.peso()}) + 1000
